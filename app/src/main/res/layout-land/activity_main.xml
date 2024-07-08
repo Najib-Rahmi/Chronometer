@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <Chronometer
+        android:id="@+id/chrono2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="50sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/playbtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:src="@drawable/play_icon"
+        android:visibility="visible"
+        android:layout_margin="8dp"
+        android:onClick="start"
+        android:layout_alignParentRight="true"
+        ></ImageView>
+
+    <ImageView
+        android:id="@+id/pausebtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:src="@drawable/pause_icon"
+        android:visibility="gone"
+        android:layout_margin="8dp"
+        android:layout_alignParentRight="true"
+        android:onClick="stop"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/resetbtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toLeftOf="@+id/playbtn"
+        android:clickable="true"
+        android:src="@drawable/stop_icon"
+        android:visibility="gone"
+        android:layout_margin="8dp"
+        android:onClick="reset"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/lapbtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toLeftOf="@+id/pausebtn"
+        android:clickable="true"
+        android:src="@drawable/lap_icon"
+        android:visibility="gone"
+        android:layout_margin="8dp"
+        android:onClick="getLaps"
+        ></ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:id="@+id/conteneur">
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
